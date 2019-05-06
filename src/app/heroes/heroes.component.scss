@@ -1,10 +1,15 @@
-//colors
-$color_gallery_approx: #eee;
-$color_smalt_blue_approx: #607d8b;
-$color_alto_approx: #ddd;
-$color_suva_gray_approx: #888;
-$white: white;
+$color_1: #607D8B;
+$color_2: #888;
+$color_3: white;
+$font_family_1: Arial;
+$background_color_1: #EEE;
+$background_color_2: #DDD;
+$background_color_3: #607D8B;
+$background_color_4: #eee;
+$background_color_5: #cfd8dc;
+$background_color_6: gray;
 
+/* HeroesComponent's private CSS styles */
 .heroes {
 	margin: 0 0 2em 0;
 	list-style-type: none;
@@ -13,34 +18,33 @@ $white: white;
 	li {
 		position: relative;
 		cursor: pointer;
-		background-color: $color_gallery_approx;
+		background-color: $background_color_1;
 		margin: .5em;
 		padding: .3em 0;
 		height: 1.6em;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 		border-radius: 4px;
 		&:hover {
-			color: $color_smalt_blue_approx;
-			background-color: $color_alto_approx;
+			color: $color_1;
+			background-color: $background_color_2;
 			left: .1em;
 		}
 	}
 	a {
-		color: $color_suva_gray_approx;
+		color: $color_2;
 		text-decoration: none;
 		position: relative;
 		display: block;
 		width: 250px;
 		&:hover {
-			color: $color_smalt_blue_approx;
+			color: $color_1;
 		}
 	}
 	.badge {
 		display: inline-block;
 		font-size: small;
-		color: $white;
+		color: $color_3;
 		padding: 0.8em 0.7em 0 0.7em;
-		background-color: $color_smalt_blue_approx;
+		background-color: $background_color_3;
 		line-height: 1em;
 		position: relative;
 		left: -1px;
@@ -49,7 +53,25 @@ $white: white;
 		min-width: 16px;
 		text-align: right;
 		margin-right: .8em;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 		border-radius: 4px 0 0 4px;
 	}
+}
+button {
+	background-color: $background_color_4;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	cursor: hand;
+	font-family: $font_family_1;
+	&:hover {
+		background-color: $background_color_5;
+	}
+}
+button.delete {
+	position: relative;
+	left: 194px;
+	top: -32px;
+	background-color: $background_color_6 !important;
+	color: $color_3;
 }
